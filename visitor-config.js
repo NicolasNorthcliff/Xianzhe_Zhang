@@ -6,7 +6,7 @@ The built-in map works on its own to display the current visitor's approximate
 location when the visitor clicks the locate button. It does not save visits.
 */
 window.VISITOR_MAP_CONFIG = {
-  providerScriptUrl: "", // e.g. an actual https://... URL from your widget provider
-  providerImageUrl: "",  // use this if the provider gives an image widget
-  providerIframeUrl: "" // use this if the provider gives an iframe widget
+  providerScriptUrl: "https://mapmyvisitors.com/globe.js?d=sIAdeOrvl93g5SRkPTFY-P8iniiqcA9GeJYeDss6sGc",
+  providerImageUrl: "",
+  providerIframeUrl: ""
 };
