@@ -14,30 +14,29 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    /* Visitor globe */
-    .globe-container {
+    /* Visitor map */
+    .visitor-map-container {
       width: 100%;
-      min-height: 400px;
       margin: 22px auto 0;
-      padding: 28px 12px;
+      padding: 24px 16px;
       background: #141819;
       border: 1px solid #303638;
       border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      text-align: center;
       overflow: hidden;
     }
 
-    .globe-container iframe,
-    .globe-container canvas {
+    .visitor-map-container img,
+    .visitor-map-container iframe,
+    .visitor-map-container canvas {
       max-width: 100%;
+      height: auto;
+      display: inline-block;
     }
 
     @media (max-width: 740px) {
-      .globe-container {
-        min-height: 300px;
-        padding: 14px 4px;
+      .visitor-map-container {
+        padding: 14px 6px;
       }
     }
   </style>
@@ -201,7 +200,8 @@
 
           <div class="quiz-actions">
             <button class="quiz-submit" type="submit">
-              Reveal the answer <span aria-hidden="true">↗</span>
+              Reveal the answer
+              <span aria-hidden="true">↗</span>
             </button>
 
             <span
@@ -227,7 +227,10 @@
           aria-live="polite"
           hidden
         >
-          <p class="quiz-result-label" id="quizResultLabel"></p>
+          <p
+            class="quiz-result-label"
+            id="quizResultLabel"
+          ></p>
 
           <h3>The Lakers fan is the lie.</h3>
 
@@ -237,19 +240,27 @@
             of my life here.
           </p>
 
-          <div class="quiz-totals" id="quizTotals" hidden>
+          <div
+            class="quiz-totals"
+            id="quizTotals"
+            hidden
+          >
             <p class="quiz-results-title">
               How visitors voted
               <span id="quizVoteTotal"></span>
             </p>
+
             <div id="quizBars"></div>
           </div>
 
-          <p class="quiz-stat-note" id="quizStatNote"></p>
+          <p
+            class="quiz-stat-note"
+            id="quizStatNote"
+          ></p>
         </div>
       </section>
 
-      <!-- REAL VISITOR GLOBE -->
+      <!-- VISITOR WORLD MAP -->
       <section
         class="compact-visitor"
         id="global-visitors"
@@ -258,15 +269,16 @@
           <h2>Visitors around the world</h2>
         </div>
 
-        <div class="globe-container">
+        <div class="visitor-map-container">
           <script
             type="text/javascript"
-            id="mmvst_globe"
-            src="https://mapmyvisitors.com/globe.js?d=sIAdeOrvl93g5SRkPTFY-P8iniiqcA9GeJYeDss6sGc">
+            id="mapmyvisitors"
+            src="https://mapmyvisitors.com/map.js?cl=0e1633&amp;w=a&amp;t=tt&amp;d=vv2S6hZrQ4k5eF4-z1l60viU_av94RjeN069-KVw_X0&amp;co=66bbf7&amp;cmo=3acc3a&amp;cmn=ff5353&amp;ct=3a3737">
           </script>
         </div>
       </section>
 
+      <!-- FOOTER -->
       <footer class="footer">
         © 2026 Xianzhe Zhang
       </footer>
@@ -282,7 +294,10 @@
   <script defer src="poll.js"></script>
 
   <!-- FIREWORKS / RAIN -->
-  <canvas id="quizEffects" aria-hidden="true"></canvas>
+  <canvas
+    id="quizEffects"
+    aria-hidden="true"
+  ></canvas>
   <script defer src="quiz-effects.js"></script>
 
 </body>
